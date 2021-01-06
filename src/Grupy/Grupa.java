@@ -1,5 +1,9 @@
 package Grupy;
 
+import Przedmioty.Przedmiot;
+
+import java.util.List;
+
 public class Grupa implements GrupaBL{
 	public static int group_id_count = 0;
 	
@@ -27,33 +31,33 @@ public class Grupa implements GrupaBL{
 	public int time;
 	public int prowadzacy_id;
 	public int ilosc_studentow;
-	public List<int> zapisani_studenci;
+	public List<Integer> zapisani_studenci;
 	public int max_ilosc_studentow;
 	
 	Grupa(){
 		group_id = group_id_count++;
-		name = NULL;
-		type = NULL;
-		day = NULL;
+		name = null;
+		type = null;
+		day = null;
 		time = 0;
 		prowadzacy_id = 0;
 		ilosc_studentow = 0;
-		zapisani_studenci = NULL;
+		zapisani_studenci = null;
 		max_ilosc_studentow = 0;
-		przedmiot = NULL;
+		przedmiot = null;
 	}
 	
 	Grupa(String[] data, Type set_type, Days set_day, Przedmiot set_przedmiot){
 		group_id = group_id_count++;
 		name = set_przedmiot.przedmiot_name;
-		type = set_type
+		type = set_type;
 		day = set_day;
 		time = data[0];
 		prowadzacy_id = data[1];
 		ilosc_studentow = 0;
-		zapisani_studenci = NULL
+		zapisani_studenci = null
 		max_ilosc_studentow = data[2];
-		przedmiot = set_przedmiot
+		przedmiot = set_przedmiot;
 	}
 	
 	public String getPrzedmiot() {
@@ -105,8 +109,8 @@ public class Grupa implements GrupaBL{
 	}
 
 	public void showGroupInfo() {
-		System.out.println("\n Dane grupy: \n Przemiot: " + przedmiot + "\n Dzien: " + id +
-    			"\n Godzina: " + time/100 + ":" + time%100 + "\n Prowadzacy: " + prowadzacy_id)
+		System.out.println("\n Dane grupy: \n Przemiot: " + przedmiot + "\n Dzien: " + day +
+    			"\n Godzina: " + time/100 + ":" + time%100 + "\n Prowadzacy: " + prowadzacy_id);
 	}
 	
 	public boolean findId(int id) {

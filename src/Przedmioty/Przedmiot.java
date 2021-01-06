@@ -8,7 +8,7 @@ public class Przedmiot {
 	
 	Przedmiot(){
 		przedmiot_id = przedmiot_id_count++;
-		przedmiot_name = NULL;
+		przedmiot_name = null;
 	}
 	
 	Przedmiot(String set_przedmiot_name){

@@ -1,5 +1,7 @@
 package Konta;
 
+import Grupy.Plan;
+
 public class Student extends Konto implements StudentBL{
 	public static int student_id_count = 100000;
 	
@@ -9,12 +11,12 @@ public class Student extends Konto implements StudentBL{
     public Student(){
         role = "Student";
         id = student_id_count++;
-        username = NULL;
-        password = NULL;
-        first_name = NULL;
-        last_name = NULL;
+        username = null;
+        password = null;
+        first_name = null;
+        last_name = null;
         pesel = 0;
-        student_plan = NULL;
+        student_plan = null;
     }
     
     public Student(String[] data) {
@@ -25,7 +27,7 @@ public class Student extends Konto implements StudentBL{
         first_name = data[2];
         last_name = data[3];
         pesel = data[4];
-        student_plan = NULL;
+        student_plan = null;
     }
     
     public Plan getStudent_plan() {
@@ -47,7 +49,7 @@ public class Student extends Konto implements StudentBL{
 	}
 	
 	public void checkSchedule() {
-		if(student_plan == NULL) {
+		if(student_plan == null) {
 			generateSchedule();
 		}
 		else {

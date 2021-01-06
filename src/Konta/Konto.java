@@ -7,26 +7,26 @@ public class Konto implements KontoBL{
     private String password;
     public String first_name;
     public String last_name;
-    public int pesel
+    public int pesel;
 
     public Konto(){
-        role = NULL;
+        role = null;
         id = 0;
-        username = NULL;
-        password = NULL;
-        first_name = NULL;
-        last_name = NULL;
+        username = null;
+        password = null;
+        first_name = null;
+        last_name = null;
         pesel = 0;
     }
     
     public Konto(String[] data) {
-    	role = NULL;
+    	role = null;
         id = 0;
         username = data[0];
         password = data[1];
         first_name = data[2];
         last_name = data[3];
-        pesel = data[4];
+        pesel = 0;
     }
 
     public String getUsername() {
@@ -61,8 +61,8 @@ public class Konto implements KontoBL{
         last_name = new_last_name;
     }
     
-    public String getPesel() {
-    	return pesel
+    public int getPesel() {
+    	return pesel;
     }
 
     public void setPesel(int new_pesel) {
@@ -71,7 +71,7 @@ public class Konto implements KontoBL{
         
     public void showData() {
     	System.out.println("\n Twoje dane: \n Rola: " + role + "\n Id: " + id +
-    			"\n Imie: " + first_namie + "\n Nazwisko: " + last_ name + 
-    			+ "\n Pesel: " + pesel)
+    			"\n Imie: " + first_name + "\n Nazwisko: " + last_name
+                + "\n Pesel: " + pesel);
     }
 }
