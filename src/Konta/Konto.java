@@ -1,8 +1,9 @@
 package Konta;
 
 public class Konto implements KontoBL{
+	
     protected int id;
-    protected int pesel;
+    protected long pesel;
     public String role;
     protected String username;
     protected String password;
@@ -61,7 +62,7 @@ public class Konto implements KontoBL{
         last_name = new_last_name;
     }
     
-    public int getPesel() {
+    public long getPesel() {
     	return pesel;
     }
 

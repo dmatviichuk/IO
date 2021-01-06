@@ -4,6 +4,7 @@ import Database.DataMaker;
 import Grupy.Plan;
 
 public class Student extends Konto implements StudentBL{
+	
 	private Plan student_plan;
 
     public Student(){
@@ -13,18 +14,18 @@ public class Student extends Konto implements StudentBL{
         password = null;
         first_name = null;
         last_name = null;
-        pesel = 0;
+        pesel = 0L;
         student_plan = null;
     }
     
-    public Student(String[] data) {
+    public Student(String[] data, long set_pesel) {
     	role = "Student";
         id = DataMaker.student_id_count++;
         username = data[0];
         password = data[1];
         first_name = data[2];
         last_name = data[3];
-        pesel = 0;
+        pesel = set_pesel;
         student_plan = null;
     }
     

@@ -4,9 +4,9 @@ import Database.DataMaker;
 import java.util.List;
 
 public class Plan implements PlanBL{
+	
 	public int owner_id;
 	public List <Grupa> lista_grup;
-	
 	
 	public Plan(int set_id){
 		owner_id = set_id;

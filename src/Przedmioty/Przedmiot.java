@@ -7,12 +7,12 @@ public class Przedmiot {
 	public int przedmiot_id;
 	public String przedmiot_name;
 	
-	Przedmiot(){
+	public Przedmiot(){
 		przedmiot_id = DataMaker.przedmiot_id_count++;
 		przedmiot_name = null;
 	}
 	
-	Przedmiot(String set_przedmiot_name){
+	public Przedmiot(String set_przedmiot_name){
 		przedmiot_id = DataMaker.przedmiot_id_count++;
 		przedmiot_name = set_przedmiot_name;
 	}

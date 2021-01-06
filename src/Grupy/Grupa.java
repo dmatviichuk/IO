@@ -6,16 +6,15 @@ import java.util.List;
 
 public class Grupa implements GrupaBL{
 	
-	
-	enum Types {
+	public enum Types {
 		Wyklad,
+		Cwiczenia,
 		Laboratorium,
 		Projekt,
-		Seminarium,
-		Cwiczenia
+		Seminarium
 	}
 	
-	enum Days {
+	public enum Days {
 		Poniedzialek,
 		Wtorek,
 		Sroda,
@@ -35,7 +34,7 @@ public class Grupa implements GrupaBL{
 	public List<Integer> zapisani_studenci;
 	public int max_ilosc_studentow;
 	
-	Grupa(){
+	public Grupa(){
 		group_id = DataMaker.group_id_count++;
 		przedmiot = null;
 		type = null;
@@ -47,11 +46,11 @@ public class Grupa implements GrupaBL{
 		max_ilosc_studentow = 0;
 	}
 	
-	Grupa(int[] data, Types set_type, Days set_day, Przedmiot set_przedmiot){
+	public Grupa(int[] data, Types set_type, Days set_day, Przedmiot set_przedmiot){
 		group_id = DataMaker.group_id_count++;
 		przedmiot = set_przedmiot.przedmiot_name;
-		type = set_type;
-		day = set_day;
+		type = null;
+		day = null;
 		time = data[0];
 		prowadzacy_id = data[1];
 		ilosc_studentow = 0;
