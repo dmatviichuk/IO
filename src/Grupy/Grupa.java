@@ -48,7 +48,7 @@ public class Grupa implements GrupaBL{
 		przedmiot = null;
 	}
 	
-	Grupa(String[] data, Type set_type, Days set_day, Przedmiot set_przedmiot){
+	Grupa(int[] data, Types set_type, Days set_day, Przedmiot set_przedmiot){
 		group_id = group_id_count++;
 		name = set_przedmiot.przedmiot_name;
 		type = set_type;
@@ -56,7 +56,7 @@ public class Grupa implements GrupaBL{
 		time = data[0];
 		prowadzacy_id = data[1];
 		ilosc_studentow = 0;
-		zapisani_studenci = null
+		zapisani_studenci = null;
 		max_ilosc_studentow = data[2];
 		przedmiot = set_przedmiot;
 	}
