@@ -4,8 +4,7 @@ import Grupy.Plan;
 
 public class Student extends Konto implements StudentBL{
 	public static int student_id_count = 100000;
-	
-    private int pesel;
+
     private Plan student_plan;
 
     public Student(){
@@ -26,7 +25,7 @@ public class Student extends Konto implements StudentBL{
         password = data[1];
         first_name = data[2];
         last_name = data[3];
-        pesel = data[4];
+        pesel = 0;
         student_plan = null;
     }
     

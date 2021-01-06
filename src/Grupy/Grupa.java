@@ -26,6 +26,7 @@ public class Grupa implements GrupaBL{
 	
 	public int group_id;
 	public String przedmiot;
+	public String name;
 	public Types type;
 	public Days day;
 	public int time;
