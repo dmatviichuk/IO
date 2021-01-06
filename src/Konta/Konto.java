@@ -1,5 +1,6 @@
+package Konta
 
-public class Konto {	
+public class Konto implements KontoBL{	
     public String role;
     private int id;
     private String username;
@@ -28,19 +29,19 @@ public class Konto {
         pesel = data[4];
     }
 
-    public String getUsername(){
+    public String getUsername() {
         return username;
     }
     
-    public void setUsername(String new_username){
+    public void setUsername(String new_username) {
         username = new_username;
     }
     
-    public String getPassword(){
+    public String getPassword() {
         return password;
     }
     
-    public void setPassword(String new_password){
+    public void setPassword(String new_password) {
         password = new_password;
     }
     
@@ -68,4 +69,9 @@ public class Konto {
     	pesel = new_pesel;
     }
         
+    public void showData() {
+    	System.out.println("\n Twoje dane: \n Rola: " + role + "\n Id: " + id +
+    			"\n Imie: " + first_namie + "\n Nazwisko: " + last_ name + 
+    			+ "\n Pesel: " + pesel)
+    }
 }

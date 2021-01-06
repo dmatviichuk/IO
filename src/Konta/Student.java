@@ -1,6 +1,6 @@
-package grupy
+package Konta
 
-public class Student extends Konto{
+public class Student extends Konto implements StudentBL{
 	public static int student_id_count = 100000;
 	
     private int pesel;
@@ -36,4 +36,24 @@ public class Student extends Konto{
     	student_plan = new_student_plan;
     }
     
+    public void checkMarks() {
+    	//nie ma potrzeby implementacji
+    }
+    
+	public void generateSchedule() {
+		nowy_plan = new Plan(id);
+		nowy_plan.fillGroups();
+		setStudent_plan(nowy_plan);
+	}
+	
+	public void checkSchedule() {
+		if(student_plan == NULL) {
+			generateSchedule();
+		}
+		else {
+			student_plan.fillGroups();
+		}
+		student_plan.showSchedule();
+	}
+	
 }
