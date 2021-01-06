@@ -6,7 +6,7 @@ public class Plan implements PlanBL{
 	public int owner_id;
 	public List <Grupa> lista_grup;
 	
-	Plan(int set_id){
+	public Plan(int set_id){
 		owner_id = set_id;
 		lista_grup = null;
 	}
