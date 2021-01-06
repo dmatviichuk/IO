@@ -1,3 +1,4 @@
+package grupy
 
 public class Student extends Konto{
 	public static int student_id_count = 100000;
