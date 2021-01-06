@@ -4,7 +4,10 @@ import Grupy.Plan;
 
 public class Student extends Konto implements StudentBL{
 	public static int student_id_count = 100000;
-
+    private int id;
+    private int pesel;
+    private String username;
+    private String password;
     private Plan student_plan;
 
     public Student(){
