@@ -1,11 +1,11 @@
 package Konta;
 
 public class Konto implements KontoBL{
-    private int id;
-    private int pesel;
+    protected int id;
+    protected int pesel;
     public String role;
-    private String username;
-    private String password;
+    protected String username;
+    protected String password;
     public String first_name;
     public String last_name;
 

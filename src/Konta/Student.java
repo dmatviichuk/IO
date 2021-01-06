@@ -1,19 +1,14 @@
 package Konta;
 
+import Database.DataMaker;
 import Grupy.Plan;
 
 public class Student extends Konto implements StudentBL{
-	public static int student_id_count = 100000;
-    private int id;
-    private int pesel;
-    private String username;
-    private String password;
-    private Plan student_plan;
-    private Plan nowy_plan;
+	private Plan student_plan;
 
     public Student(){
         role = "Student";
-        id = student_id_count++;
+        id = DataMaker.student_id_count++;
         username = null;
         password = null;
         first_name = null;
@@ -24,7 +19,7 @@ public class Student extends Konto implements StudentBL{
     
     public Student(String[] data) {
     	role = "Student";
-        id = student_id_count++;
+        id = DataMaker.student_id_count++;
         username = data[0];
         password = data[1];
         first_name = data[2];
@@ -46,7 +41,7 @@ public class Student extends Konto implements StudentBL{
     }
     
 	public void generateSchedule() {
-		nowy_plan = new Plan(id);
+		Plan nowy_plan = new Plan(id);
 		nowy_plan.fillGroups();
 		setStudent_plan(nowy_plan);
 	}

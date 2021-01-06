@@ -1,18 +1,19 @@
 package Przedmioty;
 
+import Database.DataMaker;
+
 public class Przedmiot {
-	public static int przedmiot_id_count = 0;
 	
 	public int przedmiot_id;
 	public String przedmiot_name;
 	
 	Przedmiot(){
-		przedmiot_id = przedmiot_id_count++;
+		przedmiot_id = DataMaker.przedmiot_id_count++;
 		przedmiot_name = null;
 	}
 	
 	Przedmiot(String set_przedmiot_name){
-		przedmiot_id = przedmiot_id_count++;
+		przedmiot_id = DataMaker.przedmiot_id_count++;
 		przedmiot_name = set_przedmiot_name;
 	}
 	

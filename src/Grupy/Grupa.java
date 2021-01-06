@@ -1,10 +1,11 @@
 package Grupy;
 
+import Database.DataMaker;
 import Przedmioty.Przedmiot;
 import java.util.List;
 
 public class Grupa implements GrupaBL{
-	public static int group_id_count = 0;
+	
 	
 	enum Types {
 		Wyklad,
@@ -35,7 +36,7 @@ public class Grupa implements GrupaBL{
 	public int max_ilosc_studentow;
 	
 	Grupa(){
-		group_id = group_id_count++;
+		group_id = DataMaker.group_id_count++;
 		przedmiot = null;
 		type = null;
 		day = null;
@@ -47,7 +48,7 @@ public class Grupa implements GrupaBL{
 	}
 	
 	Grupa(int[] data, Types set_type, Days set_day, Przedmiot set_przedmiot){
-		group_id = group_id_count++;
+		group_id = DataMaker.group_id_count++;
 		przedmiot = set_przedmiot.przedmiot_name;
 		type = set_type;
 		day = set_day;
