@@ -9,6 +9,7 @@ public class Student extends Konto implements StudentBL{
     private String username;
     private String password;
     private Plan student_plan;
+    private Plan nowy_plan;
 
     public Student(){
         role = "Student";
