@@ -1,3 +1,4 @@
+package Konta;
 
 public interface StudentBL {
 	//do przemyslenia funkcje zapisowe - prawdopodbnie do calkowitej przepudowy

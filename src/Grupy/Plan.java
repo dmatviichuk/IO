@@ -1,4 +1,4 @@
-package Grupy
+package Grupy;
 
 public class Plan implements PlanBL{
 	public int owner_id;

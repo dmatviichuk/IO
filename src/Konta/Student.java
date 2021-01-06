@@ -1,4 +1,4 @@
-package Konta
+package Konta;
 
 public class Student extends Konto implements StudentBL{
 	public static int student_id_count = 100000;
@@ -29,7 +29,7 @@ public class Student extends Konto implements StudentBL{
     }
     
     public Plan getStudent_plan() {
-    	return student_plan
+    	return student_plan;
     }
     
     public void setStudent_plan(Plan new_student_plan) {

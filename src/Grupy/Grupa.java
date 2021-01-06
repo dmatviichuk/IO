@@ -1,4 +1,4 @@
-package Grupy
+package Grupy;
 
 public class Grupa implements GrupaBL{
 	public static int group_id_count = 0;

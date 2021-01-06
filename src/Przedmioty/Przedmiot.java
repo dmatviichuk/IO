@@ -21,7 +21,7 @@ public class Przedmiot {
 	}
 	
 	public void setPrzedmiot_name(String new_przedmiot_name){
-		przedmiot_name = new_przedmiot_name
+		przedmiot_name = new_przedmiot_name;
 	}
 	
 }

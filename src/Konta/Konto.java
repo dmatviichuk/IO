@@ -1,4 +1,4 @@
-package Konta
+package Konta;
 
 public class Konto implements KontoBL{	
     public String role;
