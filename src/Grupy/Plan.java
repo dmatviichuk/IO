@@ -5,7 +5,7 @@ import java.util.List;
 public class Plan implements PlanBL{
 	public int owner_id;
 	public List <Grupa> lista_grup;
-	
+	public List<Grupa> all_groups;
 	public Plan(int set_id){
 		owner_id = set_id;
 		lista_grup = null;

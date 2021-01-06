@@ -1,7 +1,6 @@
 package Grupy;
 
 import Przedmioty.Przedmiot;
-
 import java.util.List;
 
 public class Grupa implements GrupaBL{
@@ -11,7 +10,8 @@ public class Grupa implements GrupaBL{
 		Wyklad,
 		Laboratorium,
 		Projekt,
-		Seminarium
+		Seminarium,
+		Cwiczenia
 	}
 	
 	enum Days {
@@ -26,7 +26,6 @@ public class Grupa implements GrupaBL{
 	
 	public int group_id;
 	public String przedmiot;
-	public String name;
 	public Types type;
 	public Days day;
 	public int time;
@@ -37,7 +36,7 @@ public class Grupa implements GrupaBL{
 	
 	Grupa(){
 		group_id = group_id_count++;
-		name = null;
+		przedmiot = null;
 		type = null;
 		day = null;
 		time = 0;
@@ -45,12 +44,11 @@ public class Grupa implements GrupaBL{
 		ilosc_studentow = 0;
 		zapisani_studenci = null;
 		max_ilosc_studentow = 0;
-		przedmiot = null;
 	}
 	
 	Grupa(int[] data, Types set_type, Days set_day, Przedmiot set_przedmiot){
 		group_id = group_id_count++;
-		name = set_przedmiot.przedmiot_name;
+		przedmiot = set_przedmiot.przedmiot_name;
 		type = set_type;
 		day = set_day;
 		time = data[0];
@@ -58,7 +56,6 @@ public class Grupa implements GrupaBL{
 		ilosc_studentow = 0;
 		zapisani_studenci = null;
 		max_ilosc_studentow = data[2];
-		przedmiot = set_przedmiot;
 	}
 	
 	public String getPrzedmiot() {
