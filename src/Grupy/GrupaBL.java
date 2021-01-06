@@ -1,3 +1,4 @@
+package Grupy;
 
 public interface GrupaBL {
 	public void showGroupInfo();

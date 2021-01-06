@@ -1,4 +1,4 @@
-package Przedmioty
+package Przedmioty;
 
 public class Przedmiot {
 	public static int przedmiot_id_count = 0;
