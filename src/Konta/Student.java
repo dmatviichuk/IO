@@ -59,12 +59,29 @@ public class Student extends Konto implements StudentBL{
 
 	
 	public void enroll(Grupa grupa) {
-		grupa.enroll(id);
+		int status = grupa.enroll(id);
+		
+		switch(status) {
+		case 0:
+			System.out.println("\n Poprawnie zapisano do wybranej grupy.");
+			break;
+		case 1:
+			System.out.println("\n Wystapil blad podczas zapisu - jestes juz zapisany do tej grupy.");
+			break;
+		case 2:
+			System.out.println("\n Wystapil blad podczas zapisu - nie ma juz wolnych miejsc.");
+			break;
+		}
 	}
 
 	
 	public void unenroll(Grupa grupa) {
-		grupa.unenroll(id);
+		if(grupa.unenroll(id)) {
+			System.out.println("\n Poprawnie wypisano z wybranej grupy.");
+		}
+		else {
+			System.out.println("\n Nie jestes zapisany do tej grupy.");
+		}
 	}
 	
 }
