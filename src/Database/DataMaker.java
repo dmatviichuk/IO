@@ -61,7 +61,6 @@ public class DataMaker {
 		all_subjects.add(subjectFive);
 	}
 	
-
 	public static void groupMaker() {
 		int[] groupOneData = {915, 50000, 120};
 		Grupa.Types groupOneType = Grupa.Types.Wyklad;

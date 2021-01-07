@@ -131,4 +131,14 @@ public class Grupa implements GrupaBL{
 		ilosc_studentow--;
 	}
 
+	
+	public void enrollAdmin(int student_id) {
+		//nie ma potrzeby implementacji
+	}
+
+	
+	public void unenrollAdmin(int student_id) {
+		//nie ma potrzeby implementacji
+	}
+
 }

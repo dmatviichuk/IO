@@ -1,7 +1,7 @@
 package Konta;
 
 import Database.DataMaker;
-import Grupy.Plan;
+import Grupy.*;
 
 public class Student extends Konto implements StudentBL{
 	
@@ -55,6 +55,16 @@ public class Student extends Konto implements StudentBL{
 			student_plan.fillGroups();
 		}
 		student_plan.showSchedule();
+	}
+
+	
+	public void enroll(Grupa grupa) {
+		grupa.enroll(id);
+	}
+
+	
+	public void unenroll(Grupa grupa) {
+		grupa.unenroll(id);
 	}
 	
 }
