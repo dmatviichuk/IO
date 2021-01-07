@@ -116,19 +116,29 @@ public class Grupa implements GrupaBL{
 	}
 	
 	public void enroll(int student_id) {
-		if(ilosc_studentow < max_ilosc_studentow) {
-			zapisani_studenci.add(student_id);
-			ilosc_studentow++;
+		if(zapisani_studenci.contains(student_id)) {
+			System.out.println("\n Wystapil blad podczas zapisu - jestes juz zapisany do tej grupy.");
+		}
+		else if(ilosc_studentow >= max_ilosc_studentow) {
+			System.out.println("\n Wystapil blad podczas zapisu - nie ma juz wolnych miejsc.");
 		}
 		else {
-			System.out.println("\n Wystapil blad podczas zapisu - przekroczono dozwolona liczbe miejsc.");
+			zapisani_studenci.add(student_id);
+			ilosc_studentow++;
+			System.out.println("\n Poprawnie zapisano do wybranej grupy.");
 		}
 		
 	}
 	
 	public void unenroll(int student_id) {
-		zapisani_studenci.remove(zapisani_studenci.indexOf(student_id));
-		ilosc_studentow--;
+		if(zapisani_studenci.contains(student_id)) {
+			zapisani_studenci.remove(zapisani_studenci.indexOf(student_id));
+			ilosc_studentow--;
+			System.out.println("\n Poprawnie wypisano z wybranej grupy.");
+		}
+		else {
+			System.out.println("\n Nie jestes zapisany do tej grupy.");
+		}
 	}
 
 	
