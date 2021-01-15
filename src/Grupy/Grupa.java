@@ -2,6 +2,8 @@ package Grupy;
 
 import Database.DataMaker;
 import Przedmioty.Przedmiot;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Grupa implements GrupaBL{
@@ -31,9 +33,9 @@ public class Grupa implements GrupaBL{
 	public int time;
 	public int prowadzacy_id;
 	public int ilosc_studentow;
-	public List<Integer> zapisani_studenci;
+	public List<Integer> zapisani_studenci ;
 	public int max_ilosc_studentow;
-	
+
 	public Grupa(){
 		group_id = DataMaker.group_id_count++;
 		przedmiot = null;
@@ -42,10 +44,14 @@ public class Grupa implements GrupaBL{
 		time = 0;
 		prowadzacy_id = 0;
 		ilosc_studentow = 0;
-		zapisani_studenci = null;
+		zapisani_studenci  = new ArrayList<Integer>();
 		max_ilosc_studentow = 0;
 	}
-	
+
+	public void setIlosc_studentow(int new_ilosc_studentow) {
+		ilosc_studentow = new_ilosc_studentow;
+	}
+
 	public Grupa(int[] data, Types set_type, Days set_day, Przedmiot set_przedmiot){
 		group_id = DataMaker.group_id_count++;
 		przedmiot = set_przedmiot.przedmiot_name;
@@ -54,7 +60,7 @@ public class Grupa implements GrupaBL{
 		time = data[0];
 		prowadzacy_id = data[1];
 		ilosc_studentow = 0;
-		zapisani_studenci = null;
+		zapisani_studenci = new ArrayList<Integer>();
 		max_ilosc_studentow = data[2];
 	}
 	
