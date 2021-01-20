@@ -1,4 +1,4 @@
-package Testy;
+package Testy.Units;
 import Database.DataMaker;
 import Grupy.Grupa;
 import Grupy.Plan;

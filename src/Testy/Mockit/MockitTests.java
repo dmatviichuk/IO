@@ -1,4 +1,4 @@
-package Testy;
+package Testy.Mockit;
 
 public class MockitTests {
 }
